@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $(this).css("background", "yellow");
+                $(this).css("color", "blue");
+            });
+            $("input").blur(function () {
+                $(this).css("background", "white");
+                $(this).css("color", "black");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    input 1:<input type="text"><br>
+    input 2:<input type="text"><br>
+    <input type="button" value=" ok ">
+</body>
+
+</html>

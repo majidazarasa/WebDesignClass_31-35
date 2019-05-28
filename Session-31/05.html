@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").mousedown(function () {
+                $(this).css("font-weight", "bolder");
+            });
+            $("p").mouseup(function () {
+                $(this).css("font-weight", "normal");
+            });
+            $("p").focusin(function () {
+                $(this).css("font-weight", "bolder");
+            });
+            $("p").focusout(function () {
+                $(this).css("font-weight", "bolder");
+            });
+        });
+    </script>
+</head>
+
+<body>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos debitis, nisi perferendis dolores voluptas autem vitae magnam aperiam voluptatibus saepe hic ut fuga dolore commodi? Expedita error possimus ad aliquam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos debitis, nisi perferendis dolores voluptas autem vitae magnam aperiam voluptatibus saepe hic ut fuga dolore commodi? Expedita error possimus ad aliquam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos debitis, nisi perferendis dolores voluptas autem vitae magnam aperiam voluptatibus saepe hic ut fuga dolore commodi? Expedita error possimus ad aliquam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos debitis, nisi perferendis dolores voluptas autem vitae magnam aperiam voluptatibus saepe hic ut fuga dolore commodi? Expedita error possimus ad aliquam.</p>
+
+</body>
+
+</html>

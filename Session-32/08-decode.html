@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Input Text = <input type="text" id="input" style="width: 80%">
+    <button onclick="myDecode();">Ok</button>
+    <p id="demo"></p>
+    <p id="exception"></p>
+    <script>
+        function myDecode() {
+            try {
+                uri = document.getElementById("input").value;
+                let s =
+                    "https://www.google.com/search?ei=U-TzXMn_CYKRkwXrloXgAg&q=%D8%B3%D8%A7%D9%85%D8%A7%D9%86&oq=%D8%B3%D8%A7%D9%85%D8%A7%D9%86&gs_l=psy-ab.1.9.0l10.2136.8892..14187...0.0..1.306.2590.0j2j8j1......0....1..gws-wiz.....0..0i71j0i67.5V7nI5YICWw";
+
+                document.getElementById("demo").innerText = decodeURI(uri);
+            } catch (error) {
+                document.getElementById("exception").innerText = error.name;
+            }
+        }
+    </script>
+</body>
+
+</html>

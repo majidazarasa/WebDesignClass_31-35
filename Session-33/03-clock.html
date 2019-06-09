@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Floating point : <input id="numFloat" type="number" value="0">
+    <button onclick="getNumFloat();">Submit</button>
+    <p id="demo"></p>
+    <script>
+        let NumFloat = 1000;
+        let interval;
+        let dt = new Date();
+
+        interval = setInterval(clockShow, NumFloat);
+
+        function getNumFloat() {
+            let value;
+
+            clearInterval(interval);
+            value = document.getElementById("numFloat").value;
+            switch (Number(value)) {
+                case 0:
+                    NumFloat = 1000;
+                    break;
+                case 1:
+                    NumFloat = 100;
+                    break;
+                case 2:
+                    NumFloat = 10;
+                    break;
+                case 3:
+                    NumFloat = 1;
+                    break;
+                default:
+                    NumFloat = 1000;
+            }
+            interval = setInterval(clockShow, NumFloat);
+        }
+
+        function clockShow() {
+            dt = new Date();
+
+            document.getElementById("demo").innerText = "Time -> " + dt.getHours() + " : " +
+                dt.getMinutes() + " : " +
+                dt.getSeconds();
+            if (NumFloat != 1000)
+                document.getElementById("demo").innerText += "." + Math.floor(dt.getMilliseconds() / NumFloat);
+        }
+    </script>
+</body>
+
+</html>

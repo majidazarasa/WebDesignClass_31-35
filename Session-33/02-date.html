@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="myFunc();">Ok</button>
+    <p id="demo"></p>
+    <script>
+        function myFunc() 
+        {
+            let dt = new Date();
+            dt.setFullYear(2018, 04, 01);
+            document.getElementById("demo").innerText = dt.getDate();
+        }
+    </script>
+</body>
+
+</html>

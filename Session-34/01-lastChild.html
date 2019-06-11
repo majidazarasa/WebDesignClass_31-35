@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Water</li>
+        <li>Coke</li>
+    </ul>
+    <button onclick="myFunc()"><b>Ok</b></button>
+    <button onclick="myFunc()">nop</button>
+    <script>
+        
+        function myFunc() {
+            let btn = document.getElementsByTagName("button");
+            let bdy = document.getElementsByTagName("body");
+            let list = document.getElementById("myList");
+            let listItem = document.getElementById("myList").lastElementChild;
+            listItem.innerHTML += " (Selected)";
+            listItem.style.color = "red";
+            console.log(list, listItem, bdy);
+            console.log(btn[0].innerText, btn[0].innerHTML);
+            console.log(btn[1].innerText, btn[1].innerHTML);
+        }
+    </script>
+</body>
+
+</html>

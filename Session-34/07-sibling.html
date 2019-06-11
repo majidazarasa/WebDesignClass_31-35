@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <style>
+        .parentBody * {
+            display: block;
+            border: 1px solid lightgray;
+            padding: 5px;
+            margin: 15px;
+            color: lightgray;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("li").siblings().css({
+                "color": "red",
+                "border": "1px solid blue"
+            });
+        });
+    </script>
+</head>
+
+<body class="parentBody">
+    <div>div
+        <ul>
+            <li>li
+                <span>span</span>
+            </li>
+            <li>li
+                <span>span</span>
+            </li>
+            <li>li
+                <span>span</span>
+            </li>
+            <li>li
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
